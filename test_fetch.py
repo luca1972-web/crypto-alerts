@@ -1,6 +1,6 @@
 import requests
 
-def fetch_bitget(symbol="BTCUSDT", granularity="60", limit=5):
+def fetch_bitget(symbol="BTCUSDT", granularity="1h", limit=5):
     url = f"https://api.bitget.com/api/v2/spot/market/candles?symbol={symbol}&granularity={granularity}&limit={limit}"
     try:
         response = requests.get(url)
