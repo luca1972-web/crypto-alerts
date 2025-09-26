@@ -4,6 +4,7 @@ def fetch_bitget(symbol="BTCUSDT", granularity="60", limit=5):
     url = f"https://api.bitget.com/api/v2/spot/market/candles?symbol={symbol}&granularity={granularity}&limit={limit}"
     try:
         response = requests.get(url)
+        print("📡 Raw response:", response.text)
         response.raise_for_status()
         data = response.json().get("data", [])
         if len(data) == 0:
