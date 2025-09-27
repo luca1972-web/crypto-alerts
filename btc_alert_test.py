@@ -10,7 +10,7 @@ TELEGRAM_CHAT_ID = "1610942867"
 def send_telegram_alert(symbol, timeframe, timestamp_ms):
     dt = datetime.fromtimestamp(timestamp_ms / 1000, pytz.timezone("Europe/Rome"))
     formatted_time = dt.strftime("%d/%m/%Y %H:%M:%S")
-    chart_link = f"https://www.tradingview.com/chart/?symbol=BITGET:{symbol}"
+    chart_link = f"https://www.bitget.com/it/spot/{symbol}"
 
     message = f"""
 📢 *Segnale rilevato!*
